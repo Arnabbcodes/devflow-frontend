@@ -72,8 +72,9 @@ devflow/
 │
 ├── demo-project/                # Intentional flaw testbed for live judging
 │   ├── README.md
+│   ├── devflow app
 │   ├── requirements.txt
-│   ├── app.py                   # Hardcoded secrets, unverified JWT, broad except
+│   ├── devflow_api.py           # Hardcoded secrets, unverified JWT, broad except
 │   └── tests/
 │       └── test_app.py          # Minimal test suite missing auth coverage
 │
@@ -95,58 +96,47 @@ devflow/
 
 ## 🚀 Quickstart Guide
 
-### 1. Backend Setup
+# 🔗 Live Demo
+Frontend (Web App): [Insert Render Frontend URL here]
 
-```bash
-# Navigate to backend directory
-cd backend
+Backend API (Swagger UI): [Insert Render Backend URL here]/docs
 
-# (Optional) Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+# 🛠️ Tech Stack
+Frontend: Flutter (Web), Dart, Fl_Chart, HTTP
 
-# Install dependencies
+Backend Orchestrator: Python, FastAPI, Uvicorn, Pydantic
+
+Deployment: Render (Static Site for Frontend, Web Service for Backend)
+
+AI Architecture Plan: IBM Bob / Groq (Multi-Agent Workflow)
+
+## 💻 Local Setup Guide
+# 1. Run the FastAPI Backend
+The backend serves as the orchestrator for project analysis and AI fix generation.
+
+Bash
+# Navigate to the backend directory
+cd backend-folder-name
+
+# Install required dependencies
 pip install -r requirements.txt
 
-# Configure environment variables
-# Copy template and add your GROQ_API_KEY from https://console.groq.com
-cp .env.example .env
-```
+# Start the local server
+uvicorn devflow_api:app --reload
+The API will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-Start the FastAPI development server:
-```bash
-uvicorn app.main:app --reload --port 8000
-```
-API Documentation will be live at: `http://127.0.0.1:8000/docs`
+# 2. Run the Flutter Frontend
+The frontend provides a high-fidelity dark mode UI to interact with the DevFlow orchestrator.
 
----
+Bash
+# Navigate to the frontend directory
+cd devflow-frontend
 
-### 2. Frontend Setup
-
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install Flutter dependencies
+# Fetch Flutter packages
 flutter pub get
 
-# Launch Flutter app (Chrome, Desktop, or Mobile)
+# Run the app locally in Chrome
 flutter run -d chrome
-```
-
----
-
-### 3. Testing the End-to-End Workflow
-
-1. Open `http://localhost:8000/docs` to test endpoints directly or use the Flutter UI.
-2. Upload `demo-project.zip` via `POST /projects/upload`.
-3. Trigger analysis via `POST /projects/{id}/analyze`.
-4. Inspect the detected vulnerabilities in `app.py` (Line 42 JWT flaw, Line 4 hardcoded credentials).
-5. Generate a fix via `POST /issues/fix`.
-6. Run AST verification via `POST /projects/{id}/verify`.
-7. Generate the final release report via `POST /projects/{id}/report`.
-
----
 
 ## 🏆 48-Hour Hackathon Checklist
 
