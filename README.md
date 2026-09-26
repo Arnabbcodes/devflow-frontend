@@ -94,14 +94,14 @@ devflow/
 
 ---
 
-## 🚀 Quickstart Guide
+# 🚀 Quickstart Guide
 
-# 🔗 Live Demo
+## 🔗 Live Demo
 Frontend (Web App): [Insert Render Frontend URL here]
 
 Backend API (Swagger UI): [Insert Render Backend URL here]/docs
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 Frontend: Flutter (Web), Dart, Fl_Chart, HTTP
 
 Backend Orchestrator: Python, FastAPI, Uvicorn, Pydantic
@@ -111,31 +111,31 @@ Deployment: Render (Static Site for Frontend, Web Service for Backend)
 AI Architecture Plan: IBM Bob / Groq (Multi-Agent Workflow)
 
 ## 💻 Local Setup Guide
-# 1. Run the FastAPI Backend
+## 1. Run the FastAPI Backend
 The backend serves as the orchestrator for project analysis and AI fix generation.
 
 Bash
-# Navigate to the backend directory
+## Navigate to the backend directory
 cd backend-folder-name
 
-# Install required dependencies
+## Install required dependencies
 pip install -r requirements.txt
 
-# Start the local server
+## Start the local server
 uvicorn devflow_api:app --reload
 The API will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-# 2. Run the Flutter Frontend
+## 2. Run the Flutter Frontend
 The frontend provides a high-fidelity dark mode UI to interact with the DevFlow orchestrator.
 
 Bash
-# Navigate to the frontend directory
+## Navigate to the frontend directory
 cd devflow-frontend
 
-# Fetch Flutter packages
+## Fetch Flutter packages
 flutter pub get
 
-# Run the app locally in Chrome
+## Run the app locally in Chrome
 flutter run -d chrome
 
 ## 🏆 48-Hour Hackathon Checklist
