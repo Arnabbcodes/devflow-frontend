@@ -2,7 +2,7 @@
 
 > **AI-Powered Code Review, Security Auditing & Release Gatekeeper**
 
-DevFlow is an autonomous software quality and release-readiness engine designed to bridge the gap between rapid software development and rigorous production safety. By coupling **Groq AI (llama-3.3-70b-versatile)** with safe **Python AST static syntax verification**, DevFlow analyzes codebases, detects security flaws and regressions, synthesizes surgical code fixes, and enforces automated release gating without running untrusted code.
+DevFlow is an autonomous software quality and release-readiness engine designed to bridge the gap between rapid software development and rigorous production safety. By coupling **Groq AI** with safe **Python AST static syntax verification**, DevFlow analyzes codebases, detects security flaws and regressions, synthesizes surgical code fixes, and enforces automated release gating without running untrusted code.
 
 ---
 
@@ -23,7 +23,7 @@ DevFlow is an autonomous software quality and release-readiness engine designed 
 | :--- | :--- | :--- |
 | **Flutter (Dart)** | **Frontend Dashboard** | Material 3 dark interface with live charts (`fl_chart`), audit flows, and remediation views. |
 | **FastAPI (Python)** | **Backend API Server** | Asynchronous REST API, multipart ZIP handling, CORS orchestration, and Pydantic validation. |
-| **Groq (`llama-3.3-70b`)** | **Runtime Application AI** | High-throughput LLM runtime powering live code analysis, fix generation, and test synthesis. |
+| **Groq** | **Runtime Application AI** | High-throughput LLM runtime powering live code analysis, fix generation, and test synthesis. |
 | **Python AST (`ast.parse`)** | **Verification Engine** | Fast, deterministic, and safe syntax verification ensuring zero execution side-effects. |
 | **Supabase (PostgreSQL)** | **Cloud Persistence** | Normalized relational schema with Row-Level Security (RLS) policies for user data isolation. |
 | **IBM Bob 2.0** | **AI Engineering Copilot** | Autonomous development partner utilized across architecture, implementation, debugging, and documentation. |
@@ -138,13 +138,3 @@ flutter pub get
 ## Run the app locally in Chrome
 flutter run -d chrome
 
-## 🏆 48-Hour Hackathon Checklist
-
-- [x] Flutter Material 3 Dashboard & Visual Charts
-- [x] FastAPI REST API with complete CRUD & upload pipeline
-- [x] Groq `llama-3.3-70b` integration with structured JSON mode
-- [x] Zero-RCE Python AST syntax verification
-- [x] Zip Slip directory traversal security protection
-- [x] Supabase PostgreSQL relational schema & RLS policies
-- [x] Realistic flawed `demo-project` for live demonstrations
-- [x] Verifiable IBM Bob 2.0 attribution evidence
